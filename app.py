@@ -41,6 +41,8 @@ def github_webhook():
         collection.insert_one(payload)
 
     return jsonify({"message": "Event processed"}), 200
+    if __name__ == "__main__":
+    app.run(debug=True)
 
 
 @app.route("/events", methods=["GET"])
